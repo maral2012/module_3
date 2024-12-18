@@ -1,15 +1,12 @@
 calls = 0
-
 def count_calls():
     global calls
     calls += 1
-
 def string_info(String):
     Stroka = str(String)
     result = (len(Stroka), Stroka.lower(), Stroka.upper())
     count_calls()
     return result
-
 def is_contains(string, list_to_search):
     string = str(string).lower()
     list_to_search = list(list_to_search)
@@ -22,9 +19,8 @@ def is_contains(string, list_to_search):
             result = False
             continue
     return result
-
-print(string_info('Capybara'))
-print(string_info('Armageddon'))
-print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))
-print(is_contains('cycle', ['recycling', 'cyclic']))
-print(calls)
+print (string_info('Capybara'))
+print (string_info('Armageddon'))
+print (is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))
+print (is_contains('cycle', ['recycling', 'cyclic']))
+print (calls)
