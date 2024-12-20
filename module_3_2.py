@@ -1,6 +1,7 @@
-def send_email (massage, recipient, sender = "university.help@gmail.com"):
+def send_email(massage, recipient, sender="university.help@gmail.com"):
     def is_valid_email(email):
-        return("@" in email) and (email.endswith((".com", ".ru", ".net")))
+        return ("@" in email) and (email.endswith((".com", ".ru", ".net")))
+
     if not is_valid_email(sender) or not is_valid_email(recipient):
         print(f"Не возможно отправить письмо с адреса {sender} на адрес {recipient}")
         return
@@ -10,8 +11,9 @@ def send_email (massage, recipient, sender = "university.help@gmail.com"):
     if sender == "university.help@gmail.com":
         print(f"Письмо успешно отправлено с адреса {sender} на адрес {recipient}.")
     else:
-        print(f"НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! письмо отправлено с адреса {sender} на адрес {recipient}." )
+        print(f"НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! письмо отправлено с адреса {sender} на адрес {recipient}.")
     return
+
 
 send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
 send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
