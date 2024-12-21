@@ -1,8 +1,17 @@
-def print_parms(a = 1, b = 'строка', c = True):
+def print_params(a = 1, b = 'строка', c = True):
     print(a, b, c)
-values_list = [36.6, 37, 35.8]
-values_dict = {'a' : 28, 'b' : 32, 'c' : 15}
-values_list_2 = ['tip', 49]
-print_parms(*values_list_2, 17)
-print_parms(*values_list)
-print_parms(**values_dict)
+print_params(5, 'ddder')
+print_params( 7,None, False)
+print_params(26)
+print_params()
+print_params(b=25)
+print('Функция print_params(b=25) работает')
+print_params(c = [1,2,3])
+print('Функция print_params(c = [1,2,3]) работает')
+values_list = [125, None, 'Текст']
+values_dict = {'a':3.14, 'b':"Пи", 'c':False}
+print_params(*values_list)
+print_params(**values_dict)
+values_list_2 = ['Тополь -', 38]
+print_params(*values_list_2, 42)
+print('Функция print_params(*values_list_2, 42) работает')
